@@ -1,0 +1,46 @@
+{
+    "root": true,
+    "plugins": ["react", "jsx-a11y"],
+    "extends": [
+        "eslint:recommended",
+        "plugin:react/recommended",
+        "plugin:jsx-a11y/recommended"
+    ],
+    "rules": {
+        "no-case-declarations": 0,
+        "lines-around-comment": [
+            2,
+            {
+                "allowArrayStart": true,
+                "allowBlockStart": true,
+                "allowObjectStart": true,
+                "beforeBlockComment": true,
+                "beforeLineComment": true
+            }
+        ],
+        "no-console": ["warn", { "allow": ["warn", "error", "debug", "info"] }],
+        "react/jsx-key": 2,
+        "react/prop-types": 0,
+        "react/display-name": 0
+    },
+    "parserOptions": {
+        "sourceType": "module",
+        "ecmaVersion": 8,
+        "ecmaFeatures": {
+            "jsx": true,
+            "destructuring": true,
+            "spread": true,
+            "experimentalObjectRestSpread": true
+        }
+    },
+    "env": {
+        "browser": true,
+        "node": true
+    },
+    "globals": {
+        "module": true,
+        "require": true,
+        "graphql": true,
+        "__dirname": true
+    }
+}

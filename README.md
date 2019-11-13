@@ -1,97 +1,104 @@
-<!-- AUTO-GENERATED-CONTENT:START (STARTER) -->
-<p align="center">
-  <a href="https://www.gatsbyjs.org">
-    <img alt="Gatsby" src="https://www.gatsbyjs.org/monogram.svg" width="60" />
-  </a>
-</p>
-<h1 align="center">
-  Gatsby's default starter
-</h1>
+# Gatsby Remotely Tailwind Starter
 
-Kick off your project with this default boilerplate. This starter ships with the main Gatsby configuration files you might need to get up and running blazing fast with the blazing fast app generator for React.
+[![code style: prettier](https://img.shields.io/badge/code_style-prettier-ff69b4.svg?style=flat-square)](https://github.com/prettier/prettier)
 
-_Have another more specific idea? You may want to check out our vibrant collection of [official and community-created starters](https://www.gatsbyjs.org/docs/gatsby-starters/)._
+### INITIALIZATION
 
-## 🚀 Quick start
+#### Install Gatsby Remotely Tailwind Starter as your project
 
-1.  **Create a Gatsby site.**
+Please note that Gatsby CLI (`npm install -g gatsby-cli`) should be installed on your system in order to run gatsby commands.
 
-    Use the Gatsby CLI to create a new site, specifying the default starter.
+1. Clone this repo to create your project and navigate to it (replace my-project with something telling)
 
-    ```shell
-    # create a new Gatsby site using the default starter
-    gatsby new my-default-starter https://github.com/gatsbyjs/gatsby-starter-default
-    ```
+```
+$ git clone https://github.com/arnars/gatsby-remotely-tailwind-starter/ my-project && cd my-project
+```
 
-1.  **Start developing.**
+2. Create new repository on our [GitHub page](https://github.com/arnars) called my-project
 
-    Navigate into your new site’s directory and start it up.
+3. Modify `package.json` to fit your needs.
 
-    ```shell
-    cd my-default-starter/
-    gatsby develop
-    ```
+4. Install project dependencies
 
-1.  **Open the source code and start editing!**
+```
+$ npm
+```
 
-    Your site is now running at `http://localhost:8000`!
+6. Make your first commit
 
-    _Note: You'll also see a second link: _`http://localhost:8000/___graphql`_. This is a tool you can use to experiment with querying your data. Learn more about using this tool in the [Gatsby tutorial](https://www.gatsbyjs.org/tutorial/part-five/#introducing-graphiql)._
+```
+$ git add :/ -A && git commit -m "First commit"
+```
 
-    Open the `my-default-starter` directory in your code editor of choice and edit `src/pages/index.js`. Save your changes and the browser will update in real time!
+6. Push to master
 
-## 🧐 What's inside?
+```
+$ git push origin master
+```
 
-A quick look at the top-level files and directories you'll see in a Gatsby project.
+7. Branch out and start developing
 
-    .
-    ├── node_modules
-    ├── src
-    ├── .gitignore
-    ├── .prettierrc
-    ├── gatsby-browser.js
-    ├── gatsby-config.js
-    ├── gatsby-node.js
-    ├── gatsby-ssr.js
-    ├── LICENSE
-    ├── package-lock.json
-    ├── package.json
-    └── README.md
+```
+$ git checkout -b my-branch && npm run dev
+```
 
-1.  **`/node_modules`**: This directory contains all of the modules of code that your project depends on (npm packages) are automatically installed.
+### DEVELOPING
 
-2.  **`/src`**: This directory will contain all of the code related to what you will see on the front-end of your site (what you see in the browser) such as your site header or a page template. `src` is a convention for “source code”.
+#### Install
 
-3.  **`.gitignore`**: This file tells git which files it should not track / not maintain a version history for.
+1. Clone the repo, then install the required node modules using `npm`.
 
-4.  **`.prettierrc`**: This is a configuration file for [Prettier](https://prettier.io/). Prettier is a tool to help keep the formatting of your code consistent.
+```
+$ git clone https://github.com/arnars/my-project.git && cd my-project && npm install
+```
 
-5.  **`gatsby-browser.js`**: This file is where Gatsby expects to find any usage of the [Gatsby browser APIs](https://www.gatsbyjs.org/docs/browser-apis/) (if any). These allow customization/extension of default Gatsby settings affecting the browser.
+2. Branch out and start developing
 
-6.  **`gatsby-config.js`**: This is the main configuration file for a Gatsby site. This is where you can specify information about your site (metadata) like the site title and description, which Gatsby plugins you’d like to include, etc. (Check out the [config docs](https://www.gatsbyjs.org/docs/gatsby-config/) for more detail).
+```
+$ git checkout -b my-branch && npm run dev
+```
 
-7.  **`gatsby-node.js`**: This file is where Gatsby expects to find any usage of the [Gatsby Node APIs](https://www.gatsbyjs.org/docs/node-apis/) (if any). These allow customization/extension of default Gatsby settings affecting pieces of the site build process.
+#### Branching
 
-8.  **`gatsby-ssr.js`**: This file is where Gatsby expects to find any usage of the [Gatsby server-side rendering APIs](https://www.gatsbyjs.org/docs/ssr-apis/) (if any). These allow customization of default Gatsby settings affecting server-side rendering.
+Branching is inspired by [Gitlab Flow](https://docs.gitlab.com/ee/workflow/gitlab_flow.html).
 
-9.  **`LICENSE`**: Gatsby is licensed under the MIT license.
+A few pointers:
 
-10. **`package-lock.json`** (See `package.json` below, first). This is an automatically generated file based on the exact versions of your npm dependencies that were installed for your project. **(You won’t change this file directly).**
+1. Feature branches (commits), Master branch (PR) and Production branch (PR)
+2. Always do work using feature branches, **no direct commits on master or production**
+3. Always perform code reviews via pull requests before **rebasing** onto master
+4. Always delete feature branches after rebasing onto master
+5. Pushed commits are never rebased
+6. Everyone starts from master, and targets master
+7. Fix bugs in master first then rebase via pull request to production
+8. Do not use a GUI for your git'ing, unless you are certain that the above is possible to do
 
-11. **`package.json`**: A manifest file for Node.js projects, which includes things like metadata (the project’s name, author, etc). This manifest is how npm knows which packages to install for your project.
+#### Commit messages
 
-12. **`README.md`**: A text file containing useful reference information about your project.
+Commit messages is based on [The Seven Rules of a Great Commit Message](http://chris.beams.io/posts/git-commit/#seven-rules)
 
-## 🎓 Learning Gatsby
+1. Separate subject from body with a blank line
+2. Limit the subject line to 50 characters
+3. Capitalize the subject line
+4. Do not end the subject line with a period
+5. Use the imperative mood in the subject line
+6. Wrap the body at 72 characters
+7. Use the body to explain what and why vs. how
 
-Looking for more guidance? Full documentation for Gatsby lives [on the website](https://www.gatsbyjs.org/). Here are some places to start:
+The above 7 rules should always be applied. If working on anything that **is not** a feature, please use one of the following commit type prefixes:
 
-- **For most developers, we recommend starting with our [in-depth tutorial for creating a site with Gatsby](https://www.gatsbyjs.org/tutorial/).** It starts with zero assumptions about your level of ability and walks through every step of the process.
+##### Commit types
 
-- **To dive straight into code samples, head [to our documentation](https://www.gatsbyjs.org/docs/).** In particular, check out the _Guides_, _API Reference_, and _Advanced Tutorials_ sections in the sidebar.
+-   `[fix]` (bug fix)
+-   `[docs]` (changes to documentation)
+-   `[cleanup]` (removal of obsolete files or code)
+-   `[refactor]` (refactoring production code)
+-   `[chore]` (updating gulp tasks etc; linting)
 
-## 💫 Deploy
+E.g. `[chore] Versioning`
 
-[![Deploy to Netlify](https://www.netlify.com/img/deploy/button.svg)](https://app.netlify.com/start/deploy?repository=https://github.com/gatsbyjs/gatsby-starter-default)
+When committing features, omit any prefix and just write a telling subject line.
 
-<!-- AUTO-GENERATED-CONTENT:END -->
+##### Amending
+
+Do not **ever** amend a commit that has been pushed public. Otherwise feel free.

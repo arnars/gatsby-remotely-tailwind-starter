@@ -1,0 +1,58 @@
+// React
+import React from 'react';
+
+// Gatsby
+{{#if query}}
+import { useStaticQuery, graphql, Link } from 'gatsby';
+{{else}}
+import { Link } from 'gatsby';
+{{/if}}
+import Img from 'gatsby-image';
+
+// Styling
+import styled from '@emotion/styled';
+import { css } from '@emotion/core';
+import tw from 'tailwind.macro';
+
+// Packages
+
+// Utilities
+
+// Components
+
+const {{pascalCase name}}Component = props => {
+    return (
+        <>
+            <{{pascalCase name}}>{{sentenceCase name}}</{{pascalCase name}}>
+        </>
+    );
+};
+
+const {{pascalCase name}} = tw.div`
+	block text-black
+`;
+
+{{#if query}}
+export default props => {
+    const { locale } = props.pageContext;
+    const { allDatoCmsModelName } = useStaticQuery(graphql`
+        query {
+            allDatoCmsModelName {
+                edges {
+                    node {
+                        id
+                    }
+                }
+            }
+        }
+    `);
+
+    return (
+        <{{pascalCase name}}Component
+            {...{ content: localize(allDatoCmsModelName, locale), ...props }}
+        />
+    )
+};
+{{else}}
+export default {{pascalCase name}}Component;
+{{/if}}

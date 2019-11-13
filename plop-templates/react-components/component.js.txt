@@ -1,0 +1,40 @@
+class {{pascalCase name}} {
+	constructor() {
+
+	}
+
+	// -------
+	// Setters
+	// -------
+
+	setSomething(something) {
+		this.something = something;
+	}
+
+	// -------
+	// Getters
+	// -------
+
+	getSomething() {
+		return this.something;
+	}
+
+	// --------------
+	// Event handlers
+	// --------------
+
+	/**
+	 * @function handlesomething
+	 * @memberOf {{pascalCase name}}
+	 * @description Handler for something
+	 * @param {object} event
+	 */
+	handleSomething(event) {
+		return new Promise((resolve) => {
+			resolve(event);
+		})
+	}
+
+}
+
+export default {{pascalCase name}};
