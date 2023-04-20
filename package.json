@@ -21,7 +21,7 @@
     "gatsby-plugin-offline": "^3.0.17",
     "gatsby-plugin-robots-txt": "^1.5.0",
     "gatsby-plugin-root-import": "^2.0.5",
-    "gatsby-plugin-sharp": "^2.2.34",
+    "gatsby-plugin-sharp": "^4.25.1",
     "gatsby-plugin-sitemap": "^2.2.19",
     "gatsby-plugin-svgr": "^2.0.2",
     "gatsby-source-filesystem": "^2.1.35",
